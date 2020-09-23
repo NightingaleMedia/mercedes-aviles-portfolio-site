@@ -53,7 +53,7 @@ collections:
       - {label: "Description", name: "description", widget: "text"}
       - {label: "Link", name: "url", widget: "string"}
       - {label: "Embed Link", name: "embed url", widget: "string"}
-      - {label: "Client", name: "Client", collection: "Client", widget: "relation", value_field: "title", search_fields: "title"}
+      - {label: "Client", name: "Client", collection: "Client", widget: "relation", value_field: "title", search_fields: ["title", "link"]}
 
   - name: "pages"
     label: "Pages"
