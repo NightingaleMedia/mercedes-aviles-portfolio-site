@@ -1,5 +1,6 @@
 backend:
   name: git-gateway
+  site_url: https://wizardly-cray-8f41d3.netlify.app/
   branch: master
   commit_messages:
     create: 'Create {{collection}} “{{slug}}”'
