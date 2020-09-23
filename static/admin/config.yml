@@ -48,13 +48,13 @@ collections:
     fields:
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "blog-post"}
       - {label: "Title", name: "title", widget: "string"}
-      - {label: Image, name: main-image, widget: image}
-      - {label: Image2, name: image-2, widget: image}
-      - {label: Image3, name: image-3, widget: image}
+      - {label: Image, name: main-image, widget: image, required: "false"}
+      - {label: Image2, name: image-2, widget: image, required: "false"}
+      - {label: Image3, name: image-3, widget: image, required: "false"}
       - {label: "Description", name: "description", widget: "text"}
-      - {label: "Link", name: "url", widget: "string"}
-      - {label: "Embed Link", name: "embed url", widget: "string"}
-      - {label: "Client", name: "Client", collection: "clients", widget: "relation", value_field: "title", search_fields: ["title", "link"]}
+      - {label: "Link", name: "url", widget: "string", required: "false"}
+      - {label: "Embed Link", name: "embed url", widget: "string", required: "false"}
+      - {label: "Client", name: "Client", collection: "clients", widget: "relation", value_field: "title", search_fields: ["title", "link"], required: "false"}
 
   - name: "pages"
     label: "Pages"
