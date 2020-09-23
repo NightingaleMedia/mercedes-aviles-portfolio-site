@@ -29,15 +29,31 @@ collections:
       - {label: "Tags", name: "tags", widget: "list"}
 
   - name: "clients"
-    label: "Clients"
+    label: "Client"
     folder: "src/clients"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "blog-post"}
       - {label: "Title", name: "title", widget: "string"}
-      - {label: "Publish Date", name: "date", widget: "datetime"}
       - {label: "Description", name: "description", widget: "text"}
+      - {label: "Link", name: "url", widget: "string"}
+
+  - name: "projects"
+    label: "Project"
+    folder: "src/projects"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "blog-post"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: Image, name: main-image, widget: image}
+      - {label: Image2, name: image-2, widget: image}
+      - {label: Image3, name: image-3, widget: image}
+      - {label: "Description", name: "description", widget: "text"}
+      - {label: "Link", name: "url", widget: "string"}
+      - {label: "Embed Link", name: "embed url", widget: "string"}
+      - {label: "Client", name: "Client", collection: "Client", widget: "relation", value_field: "title", search_fields: "title"}
 
   - name: "pages"
     label: "Pages"
