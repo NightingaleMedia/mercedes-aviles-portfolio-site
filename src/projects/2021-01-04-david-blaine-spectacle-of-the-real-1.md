@@ -1,6 +1,6 @@
 ---
 templateKey: blog-post
-title: David Blaine "Spectacle of The Real"
+title: Spectacle of The Real
 description: |-
   Client: David Blaine
   Director: Buck
