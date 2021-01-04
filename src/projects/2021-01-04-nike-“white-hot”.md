@@ -1,6 +1,6 @@
 ---
 templateKey: blog-post
-title: Nike “White Hot”
+title: "Nike White Hot "
 description: |-
   Client: Nike
   Design, Direction & Animation: Buck
