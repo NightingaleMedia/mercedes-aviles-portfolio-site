@@ -5,6 +5,7 @@ export const GlobalStyle = (props) => (
   <Global
     {...props}
     styles={css`
+      @import "bulma/css/bulma.css";
       .navbar .navbar-menu {
         box-shadow: none !important;
       }

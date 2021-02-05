@@ -5,6 +5,7 @@ import Navbar from "../components/Navbar";
 import useSiteMetadata from "./SiteMetadata";
 import { withPrefix } from "gatsby";
 import { GlobalStyle } from "../styles/styles";
+import "bulma/css/bulma.css";
 const TemplateWrapper = ({ children }) => {
   const { title, description } = useSiteMetadata();
   return (
