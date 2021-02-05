@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { Link, graphql, StaticQuery } from "gatsby";
-import styled from "styled-components";
+import styled from "@emotion/styled";
 import ProjectRoll__SingleProject from "./ProjectRoll__SingleProject";
 
 const ProjectRollWrap = styled.div`

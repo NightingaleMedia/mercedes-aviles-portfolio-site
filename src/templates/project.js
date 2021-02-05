@@ -5,7 +5,7 @@ import { Helmet } from "react-helmet";
 import { graphql, Link } from "gatsby";
 import Layout from "../components/Layout";
 import Content, { HTMLContent } from "../components/Content";
-import styled from "styled-components";
+import styled from "@emotion/styled";
 
 const StyledFrame = styled.iframe`
   min-height: 550px;
