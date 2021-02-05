@@ -1,5 +1,5 @@
 ---
-templateKey: blog-post
+templateKey: project
 title: "Bulleit Frontier Works "
 description: |-
   Client: Bulleit Bourbon

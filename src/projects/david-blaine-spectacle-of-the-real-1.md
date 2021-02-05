@@ -1,5 +1,5 @@
 ---
-templateKey: blog-post
+templateKey: project
 title: Spectacle of The Real
 description: |-
   Client: David Blaine

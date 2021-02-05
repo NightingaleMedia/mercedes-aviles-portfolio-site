@@ -1,5 +1,5 @@
 ---
-templateKey: blog-post
+templateKey: project
 title: "Smart Switch: Ode"
 description: |-
   Client: Samsung

@@ -1,5 +1,5 @@
 ---
-templateKey: blog-post
+templateKey: project
 title: "MailChimp: Facebook Ads "
 description: |-
   Client: MailChimp

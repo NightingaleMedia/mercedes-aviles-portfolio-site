@@ -1,5 +1,5 @@
 ---
-templateKey: blog-post
+templateKey: project
 title: Cap'n Kith
 description: |-
   Client: KITH / PepsiCo

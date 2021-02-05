@@ -1,5 +1,5 @@
 ---
-templateKey: blog-post
+templateKey: project
 title: "Osko Launh Film "
 description: |-
   Client: Osko

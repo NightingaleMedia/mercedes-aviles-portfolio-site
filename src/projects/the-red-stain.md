@@ -1,5 +1,5 @@
 ---
-templateKey: blog-post
+templateKey: project
 title: The Red Stain
 description: |-
   Production Company: The Directors Bureau, Think | Cattleya, Landia

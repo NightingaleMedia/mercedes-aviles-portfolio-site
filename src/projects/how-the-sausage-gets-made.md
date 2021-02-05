@@ -1,5 +1,5 @@
 ---
-templateKey: blog-post
+templateKey: project
 title: How The Sausage Gets Made
 description: |-
   Original Music & Sound Design: Antfood

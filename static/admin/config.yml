@@ -103,13 +103,13 @@ collections:
     label: "Project"
     folder: "src/projects"
     create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    slug: "{{slug}}"
     fields:
       - {
           label: "Template Key",
           name: "templateKey",
           widget: "hidden",
-          default: "blog-post",
+          default: "project",
         }
       - { label: "Title", name: "title", widget: "string" }
       - { label: Image, name: main-image, widget: image, required: false }

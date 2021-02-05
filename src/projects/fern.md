@@ -1,5 +1,5 @@
 ---
-templateKey: blog-post
+templateKey: project
 title: FERN
 description: |-
   Director: Johnny Kelly

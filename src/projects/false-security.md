@@ -1,5 +1,5 @@
 ---
-templateKey: blog-post
+templateKey: project
 title: "False Security "
 description: |-
   Client: Allstate
