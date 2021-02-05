@@ -6,7 +6,14 @@ module.exports = {
   },
   plugins: [
     "gatsby-plugin-react-helmet",
-    "gatsby-plugin-sass",
+    // {
+    //   resolve: "gatsby-plugin-sass",
+    //   options: {
+    //     sassOptions: {
+    //       indentedSyntax: true,
+    //     },
+    //   },
+    // },
     "gatsby-plugin-emotion",
     {
       // keep as first gatsby-source-filesystem plugin for gatsby image support
@@ -80,7 +87,6 @@ module.exports = {
         modulePath: `${__dirname}/src/cms/cms.js`,
       },
     },
-
     "gatsby-plugin-netlify", // make sure to keep it last in the array
   ],
 };
