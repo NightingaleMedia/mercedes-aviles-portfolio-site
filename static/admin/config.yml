@@ -76,7 +76,6 @@ collections:
           required: false,
         }
       - { label: "Link", name: "url", widget: "string", required: false }
-
   - name: "agency"
     label: "Agency"
     folder: "src/agencies"
@@ -115,7 +114,7 @@ collections:
       - { label: Image, name: main-image, widget: image, required: false }
       - { label: Image2, name: image-2, widget: image, required: false }
       - { label: Image3, name: image-3, widget: image, required: false }
-      - { label: "Description", name: "description", widget: "text" }
+      - { label: "Description", name: "description", widget: "markdown" }
       - { label: "Link", name: "url", widget: "string", required: false }
       - {
           label: "Embed Link",

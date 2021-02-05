@@ -2,6 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { Link, graphql } from "gatsby";
 import ProjectRoll from "../components/ProjectRoll";
+import BlogRoll from "../components/BlogRoll";
 import Layout from "../components/Layout";
 
 export const IndexPageTemplate = ({ image, title, heading, subheading }) => (
@@ -54,37 +55,17 @@ export const IndexPageTemplate = ({ image, title, heading, subheading }) => (
     <section className="section section--gradient">
       <div className="container">
         <div className="section">
-          <div className="columns">
-            <div className="column is-10 is-offset-1">
-              <div className="content">
-                <div className="content"></div>
-                <div className="columns">
-                  <div className="column is-12">
-                    <h3 className="has-text-weight-semibold is-size-2">
-                      Projects
-                    </h3>
-                  </div>
-                </div>
-
-                <div className="columns">
-                  <div className="column is-12 has-text-centered">
-                    <ProjectRoll />
-                  </div>
-                </div>
-                <div className="column is-12">
-                  <h3 className="has-text-weight-semibold is-size-2">
-                    Performances
-                  </h3>
-
-                  {/* <BlogRoll /> */}
-                  <div className="column is-12 has-text-centered">
-                    <ProjectRoll />
-                    <Link className="btn" to="/blog">
-                      Read more
-                    </Link>
-                  </div>
-                </div>
-              </div>
+          <div className="content">
+            <h3 className="has-text-weight-semibold is-size-2">Projects</h3>
+            <div className="has-text-centered">
+              <ProjectRoll />
+            </div>
+            <h3 className="has-text-weight-semibold is-size-2">Performances</h3>
+            <div className="has-text-centered">
+              <BlogRoll />
+              <Link className="btn" to="/blog">
+                Read more
+              </Link>
             </div>
           </div>
         </div>

@@ -5,12 +5,19 @@ import { Helmet } from "react-helmet";
 import { graphql, Link } from "gatsby";
 import Layout from "../components/Layout";
 import Content, { HTMLContent } from "../components/Content";
+import styled from "styled-components";
+
+const StyledFrame = styled.iframe`
+  min-height: 550px;
+  width: 100%;
+  border: none;
+  inset: none;
+`;
 
 export const ProjectTemplate = ({
   content,
   contentComponent,
   description,
-
   title,
   helmet,
 }) => {
@@ -22,6 +29,9 @@ export const ProjectTemplate = ({
       <div className="container content">
         <div className="columns">
           <div className="column is-10 is-offset-1">
+            <StyledFrame
+              src={"https://player.vimeo.com/video/242987916"}
+            ></StyledFrame>
             <h1 className="title is-size-2 has-text-weight-bold is-bold-light">
               {title}
             </h1>
