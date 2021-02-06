@@ -5,7 +5,9 @@ import Navbar from "../components/Navbar";
 import useSiteMetadata from "./SiteMetadata";
 import { withPrefix } from "gatsby";
 import { GlobalStyle } from "../styles/styles";
-import "bulma/css/bulma.css";
+
+import "./all.sass";
+
 const TemplateWrapper = ({ children }) => {
   const { title, description } = useSiteMetadata();
   return (
@@ -49,7 +51,7 @@ const TemplateWrapper = ({ children }) => {
             content={`${withPrefix("/")}img/og-image.jpg`}
           />
         </Helmet>
-        <GlobalStyle />
+        {/* <GlobalStyle /> */}
         <Navbar />
         <div style={{ minHeight: "80vh" }}>{children}</div>
         <Footer />
