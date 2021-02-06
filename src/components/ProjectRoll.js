@@ -2,11 +2,12 @@ import React from "react";
 import PropTypes from "prop-types";
 import { Link, graphql, StaticQuery } from "gatsby";
 import styled from "@emotion/styled";
+
 import ProjectRoll__SingleProject from "./ProjectRoll__SingleProject";
 
 const ProjectRollWrap = styled.div`
   width: 100%;
-  max-width: calc(${(props) => props.imageSize} * 3 + 60px);
+  max-width: calc(${(props) => props.imageSize} * 3 + 100px);
   display: grid;
   grid-template-columns: repeat(
     auto-fit,

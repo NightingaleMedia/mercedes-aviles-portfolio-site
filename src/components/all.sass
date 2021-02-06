@@ -28,6 +28,17 @@ li
     margin-bottom: 1.5rem
     margin-top: 0
 
+.bg-black
+    background-color: #181818
+    color: white
+    transition: all 800ms ease
+
+.nav-button
+    padding: 3px 10px 3px 10px
+    &:hover
+        background: #f7f7f7
+        color: #494949
+
 // Helper Classes
 .full-width-image-container
     width: 100vw
@@ -44,7 +55,7 @@ li
 
 .full-width-image
     width: 100vw
-    height: 400px
+    height: 300px
     background-size: cover
     background-position: bottom
     display: flex
@@ -122,6 +133,9 @@ $menu-label-color: $white-ter
     margin: 0 1.5em 0 0
 
 @import "~bulma"
+
+.content h3
+    margin: 0
 
 // responsiveness
 +tablet-only

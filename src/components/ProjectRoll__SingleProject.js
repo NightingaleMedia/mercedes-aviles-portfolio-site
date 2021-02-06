@@ -2,6 +2,8 @@ import React from "react";
 import PropTypes from "prop-types";
 import styled from "@emotion/styled";
 import Image from "gatsby-image";
+import { graphql, StaticQuery } from "gatsby";
+import placeholder from "../img/placeholder.png";
 const Square = styled.div`
   height: 100%;
   width: 100%;
@@ -25,7 +27,7 @@ const Square = styled.div`
     content: " ";
   }
   &&:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
   }
   &&:hover::after {
     left: 0;
@@ -35,27 +37,34 @@ const Square = styled.div`
     transform: skew(0);
   }
 `;
-const InnerImage = styled(Image)``;
+const InnerImage = styled(Image)`
+  height: 100%;
+  position: absolute;
+  width: 100%;
+`;
 const InnerTitle = styled.div`
   background-color: black;
   display: inline-block;
-
-  padding-left: 2rem;
-  padding-right: 2rem;
+  position: absolute;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
   color: white;
-  font-size: 1.5rem;
+  font-size: 1rem;
+  bottom: 5%;
+  right: 5%;
   font-weight: 800;
   max-width: calc(${(props) => props.imageSize} - 80px);
 `;
 const InnerSubtitle = styled.div`
   background-color: black;
-
-  padding-left: 1rem;
-  padding-right: 1rem;
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
   color: white;
   font-size: 1rem;
   font-weight: 400;
-  margin-top: 1rem;
 `;
 
 const ProjectRoll__SingleProject = ({ project, imageSize }) => {
@@ -67,13 +76,35 @@ const ProjectRoll__SingleProject = ({ project, imageSize }) => {
     Client,
     templateKey,
   } = project.node.frontmatter;
+
   return (
-    <Square>
-      {image && <InnerImage fluid={image.childImageSharp.fluid} />}
-      <InnerTitle imageSize={imageSize}>{title}</InnerTitle>
-      <InnerSubtitle>{Client && Client}</InnerSubtitle>
-    </Square>
+    <StaticQuery
+      query={FeatImgQuery}
+      render={(data) => (
+        <Square>
+          <InnerImage fluid={data.allImageSharp.edges[0].node.fluid} />
+          <InnerTitle imageSize={imageSize}>{title}</InnerTitle>
+          <InnerSubtitle>{Client && Client}</InnerSubtitle>
+        </Square>
+      )}
+    ></StaticQuery>
   );
 };
+
+export const FeatImgQuery = graphql`
+  query FeatImageQuery {
+    allImageSharp(
+      filter: { fluid: { originalName: { eq: "placeholder.png" } } }
+    ) {
+      edges {
+        node {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+    }
+  }
+`;
 
 export default ProjectRoll__SingleProject;
