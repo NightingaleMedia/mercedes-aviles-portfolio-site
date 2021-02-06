@@ -5,14 +5,14 @@ import { Helmet } from "react-helmet";
 import { graphql, Link } from "gatsby";
 import Layout from "../components/Layout";
 import Content, { HTMLContent } from "../components/Content";
-// import styled from "@emotion/styled";
+import styled from "@emotion/styled";
 
-// const StyledFrame = styled.iframe`
-//   min-height: 550px;
-//   width: 100%;
-//   border: none;
-//   inset: none;
-// `;
+const StyledFrame = styled.iframe`
+  min-height: 550px;
+  width: 100%;
+  border: none;
+  inset: none;
+`;
 
 export const ProjectTemplate = ({
   content,
@@ -29,7 +29,7 @@ export const ProjectTemplate = ({
       <div className="container content">
         <div className="columns">
           <div className="column is-10 is-offset-1">
-            <iframe src={"https://player.vimeo.com/video/242987916"}></iframe>
+            <StyledFrame src={"https://player.vimeo.com/video/242987916"} />
             <h1 className="title is-size-2 has-text-weight-bold is-bold-light">
               {title}
             </h1>
