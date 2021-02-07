@@ -126,8 +126,8 @@ collections:
           name: "Client",
           collection: "clients",
           widget: "relation",
-          value_field: "title",
-          search_fields: "title",
+          valueField: "title",
+          searchFields: ["title"],
           required: false,
         }
       - {
@@ -135,12 +135,11 @@ collections:
           name: "Agency",
           collection: "agency",
           widget: "relation",
-          value_field: "title",
-          search_fields: "title",
+          valueField: "title",
+          searchFields: ["title"],
           required: false,
           multiple: true,
         }
-
   - name: "pages"
     label: "Pages"
     files:
