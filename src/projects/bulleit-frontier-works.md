@@ -5,5 +5,5 @@ description: |-
   Client: Bulleit Bourbon
   Original Music: Antfood
   Agency: Barton F. Graf
-embed url: https://vimeo.com/285185270
+embed url: https:/player./vimeo.com/video/285185270
 ---
