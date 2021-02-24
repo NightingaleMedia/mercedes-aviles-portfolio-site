@@ -5,5 +5,5 @@ description: |-
   Client: Samsung
   Agency: RGA
   Original Music: Antfood
-embed url: https://vimeo.com/222871924
+embed url: https://player.vimeo.com/video/222871924
 ---
