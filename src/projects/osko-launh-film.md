@@ -5,5 +5,5 @@ description: |-
   Client: Osko
   Production, Direction & Animation: Buck
   Music & Sound Design: Antfood
-embed url: https://vimeo.com/289751667
+embed url: https://player.vimeo.com/video/289751667
 ---
