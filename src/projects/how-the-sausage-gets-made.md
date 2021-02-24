@@ -5,5 +5,5 @@ description: |-
   Original Music & Sound Design: Antfood
   Director: Buck
   VO: Daniel aka MC Danger
-embed url: https://vimeo.com/241573335
+embed url: https://player.vimeo.com/video/241573335
 ---
