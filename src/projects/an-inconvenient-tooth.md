@@ -1,7 +1,7 @@
 ---
 templateKey: project
 title: "An Inconvenient Tooth "
-main-image: /img/hello1.png
+main-image: /img/hello_square.png
 description: |-
   Client: Hello
   Production Company: Hornet
