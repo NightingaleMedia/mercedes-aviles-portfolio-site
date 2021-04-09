@@ -8,7 +8,7 @@ import Content, { HTMLContent } from "../components/Content";
 import styled from "@emotion/styled";
 import { MdKeyboardArrowLeft } from "react-icons/md";
 
-const StyledFrame = styled.iframe`
+export const StyledFrame = styled.iframe`
   min-height: 550px;
   width: 100%;
   border: none;
@@ -19,6 +19,7 @@ export const ProjectTemplate = ({
   content,
   contentComponent,
   description,
+  embed_url,
   title,
   helmet,
 }) => {
@@ -36,17 +37,19 @@ export const ProjectTemplate = ({
                   display: "flex",
                   alignItems: "center",
                   cursor: "pointer",
+                  margin: "0 auto 2rem auto",
                 }}
               >
                 <MdKeyboardArrowLeft style={{ fontSize: "2rem" }} />
                 Back
               </div>
             </Link>
-            <StyledFrame src={"https://player.vimeo.com/video/242987916"} />
+            <StyledFrame src={embed_url} />
             <h1 className="title is-size-2 has-text-weight-bold is-bold-light">
               {title}
             </h1>
-            <p>{description}</p>
+            <div dangerouslySetInnerHTML={{ __html: description }} />
+
             <PostContent content={content} />
           </div>
         </div>
@@ -63,6 +66,7 @@ const Project = ({ data }) => {
       <ProjectTemplate
         content={post.html}
         contentComponent={HTMLContent}
+        embed_url={post.frontmatter.embed_url}
         description={post.frontmatter.description}
         helmet={
           <Helmet titleTemplate="%s | Blog">

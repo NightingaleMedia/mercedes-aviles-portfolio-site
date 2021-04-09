@@ -51,7 +51,8 @@ export default () => (
               id
               frontmatter {
                 title
-                image {
+                main_image {
+                  publicURL
                   childImageSharp {
                     fluid(maxWidth: 500) {
                       ...GatsbyImageSharpFluid

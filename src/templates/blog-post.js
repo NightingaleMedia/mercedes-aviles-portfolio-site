@@ -5,12 +5,13 @@ import { Helmet } from "react-helmet";
 import { graphql, Link } from "gatsby";
 import Layout from "../components/Layout";
 import Content, { HTMLContent } from "../components/Content";
-
+import { StyledFrame } from "./project";
+import { MdKeyboardArrowLeft } from "react-icons/md";
 export const BlogPostTemplate = ({
   content,
   contentComponent,
   description,
-
+  embed_url,
   title,
   helmet,
 }) => {
@@ -22,9 +23,24 @@ export const BlogPostTemplate = ({
       <div className="container content">
         <div className="columns">
           <div className="column is-10 is-offset-1">
+            <Link to="/">
+              <div
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  cursor: "pointer",
+                  margin: "0 auto 2rem auto",
+                }}
+              >
+                <MdKeyboardArrowLeft style={{ fontSize: "2rem" }} />
+                Back
+              </div>
+            </Link>
+            <StyledFrame src={embed_url} />
             <h1 className="title is-size-2 has-text-weight-bold is-bold-light">
               {title}
             </h1>
+
             <p>{description}</p>
             <PostContent content={content} />
           </div>
@@ -48,6 +64,7 @@ const BlogPost = ({ data }) => {
   return (
     <Layout>
       <BlogPostTemplate
+        embed_url={post.frontmatter.url}
         content={post.html}
         contentComponent={HTMLContent}
         description={post.frontmatter.description}
@@ -84,6 +101,7 @@ export const pageQuery = graphql`
         title
         description
         # tags
+        url
       }
     }
   }

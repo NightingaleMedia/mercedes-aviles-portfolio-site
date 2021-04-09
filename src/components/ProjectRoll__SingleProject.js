@@ -72,17 +72,22 @@ const ProjectRoll__SingleProject = ({ project, imageSize }) => {
     title,
     subheading,
     description,
-    image,
+    main_image,
     Client,
     templateKey,
   } = project.node.frontmatter;
-
+  console.log(main_image);
   return (
     <StaticQuery
       query={FeatImgQuery}
       render={(data) => (
         <Square>
-          <InnerImage fluid={data.allImageSharp.edges[0].node.fluid} />
+          <InnerImage
+            fluid={
+              main_image?.childImageSharp?.fluid ||
+              data.allImageSharp.edges[0].node.fluid
+            }
+          />
           <InnerTitle imageSize={imageSize}>{title}</InnerTitle>
           <InnerSubtitle>{Client && Client}</InnerSubtitle>
         </Square>

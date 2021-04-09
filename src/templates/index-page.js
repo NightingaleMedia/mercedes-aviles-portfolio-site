@@ -13,7 +13,7 @@ export const IndexPageTemplate = ({ image, title, heading, subheading }) => (
     <section className="section section--gradient">
       <div className="container">
         <div className="section">
-          <div className="content">
+          <div className="content" id="projects">
             <div className="sticky-title">
               <h3 className="has-text-weight-semibold is-size-2">Projects</h3>
             </div>
@@ -21,7 +21,7 @@ export const IndexPageTemplate = ({ image, title, heading, subheading }) => (
               <ProjectRoll />
             </div>
 
-            <div class="sticky-title">
+            <div class="sticky-title" id="performances">
               <h3 className="has-text-weight-semibold is-size-2">
                 Performances
               </h3>
