@@ -5,7 +5,7 @@ import { Helmet } from "react-helmet";
 import { graphql, Link } from "gatsby";
 import Layout from "../components/Layout";
 import Content, { HTMLContent } from "../components/Content";
-import { StyledFrame } from "./project";
+import { FrameWrapper } from "./project";
 import { MdKeyboardArrowLeft } from "react-icons/md";
 export const BlogPostTemplate = ({
   content,
@@ -36,7 +36,9 @@ export const BlogPostTemplate = ({
                 Back
               </div>
             </Link>
-            <StyledFrame src={embed_url} />
+            <FrameWrapper>
+              <iframe src={embed_url} alt={description} />
+            </FrameWrapper>
             <h1 className="title is-size-2 has-text-weight-bold is-bold-light">
               {title}
             </h1>

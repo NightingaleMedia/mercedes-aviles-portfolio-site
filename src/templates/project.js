@@ -8,12 +8,22 @@ import Content, { HTMLContent } from "../components/Content";
 import styled from "@emotion/styled";
 import { MdKeyboardArrowLeft } from "react-icons/md";
 
-export const StyledFrame = styled.iframe`
-  min-height: 550px;
-  width: 100%;
-  border: none;
-  inset: none;
+export const FrameWrapper = styled.div`
+  overflow: hidden;
+  /* 16:9 aspect ratio */
+  padding-top: 56.25%;
+  position: relative;
+
+  && iframe {
+    border: 0;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
 `;
+export const StyledFrame = styled.iframe``;
 
 export const ProjectTemplate = ({
   content,
@@ -24,6 +34,14 @@ export const ProjectTemplate = ({
   helmet,
 }) => {
   const PostContent = contentComponent || Content;
+
+  let markdown_description = description.replace(/\n/g, "<br/>");
+  markdown_description = markdown_description.replace(
+    /\*\*(.*?)\*\*/gm,
+    "<strong>" + "$1" + "</strong>"
+  );
+
+  markdown_description = markdown_description.replace(/\*\*/gi, "");
 
   return (
     <section className="section">
@@ -44,11 +62,15 @@ export const ProjectTemplate = ({
                 Back
               </div>
             </Link>
-            <StyledFrame src={embed_url} />
+            <FrameWrapper>
+              <StyledFrame src={embed_url} />
+            </FrameWrapper>
             <h1 className="title is-size-2 has-text-weight-bold is-bold-light">
               {title}
             </h1>
-            <div dangerouslySetInnerHTML={{ __html: description }} />
+            <div
+              dangerouslySetInnerHTML={{ __html: markdown_description }}
+            ></div>
 
             <PostContent content={content} />
           </div>
